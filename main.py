@@ -6,8 +6,8 @@ import json
 if __name__ == '__main__':
 
     app = Application(AppConfig(
-        db_auto_connect=False,
-        riot_dev_api_key='RGAPI-7b60f5da-d7a9-4bfd-853e-02261aeed0b8',
+        db_host='mongodb://localhost:27017/lol_static',
+        riot_dev_api_key='RGAPI-793ea4dc-df01-4189-9104-b8b497c586ae',
         riot_dev_api_region='EUW1'
     ))
 

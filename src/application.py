@@ -9,7 +9,7 @@ class Application(object):
         self._config = config
 
         if self.config.db_auto_connect:
-            connect(self.config)
+            connect(self.config.db_host)
 
     @property
     def config(self):
