@@ -1,4 +1,5 @@
-from src.config import AppConfig
+from .orm import connect
+from .config import AppConfig
 
 
 class Application(object):
@@ -6,6 +7,9 @@ class Application(object):
 
     def __init__(self, config: AppConfig):
         self._config = config
+
+        if self.config.db_auto_connect:
+            connect(self.config)
 
     @property
     def config(self):
